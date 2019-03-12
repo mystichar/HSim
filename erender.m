@@ -33,10 +33,12 @@ E=zeros(x,x,x,x,x);
      end
    end
 end
+hold on
 E(:,:,:,1,n_a+2)=X;
 E(:,:,:,2,n_a+2)=Y;
 E(:,:,:,3,n_a+2)=Z;
 quiver3(E(:,:,:,1,n_a+2),E(:,:,:,2,n_a+2),E(:,:,:,3,n_a+2),E(:,:,:,1,n_a+1),E(:,:,:,2,n_a+1),E(:,:,:,3,n_a+1))
 eplott=E;
+hold off
 
 endfunction
