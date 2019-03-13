@@ -1,13 +1,13 @@
 function [Plott]=plott51(a,b,c,q)
-  h=.005;
+  h=.05;
 
-  x_lol= 0:h:4;
+  x_lol= 0:h:12;
 
-  q_p=[0,1,-1];
-  m=[1,1,1];
-  x_o=[0,0,0];
+  q_p=[4,-1,-1];
+  m=[9999999,1,1];
+  x_o=[3,0,0];
   y_o=[0,1,-1];
-  z_o=[0,0,0];
+  z_o=[0,1,0];
   u_o=[0,0,0];
   v_o=[0,0,0];
   w_o=[0,0,0];
@@ -20,7 +20,7 @@ P(:,5,1)=v_o;
 P(:,6,1)=w_o;
 
   [ m_m, n_m] = size(m);
-n_m
+
   [ m_xlol, n_xlol] = size(x_lol);
 
 ##particles will move one step after landing in another particle
@@ -48,7 +48,7 @@ end
 
 quiver3(0,0,0,0,0,0)
 hold on
-axis(3*[-1,1,-1,1,-1,1])
+axis(12*[-1,1,-1,1,-1,1])
 for i=1:n_xlol
 for p=1:n_m
  forn(p,i)=P(p,1,i);
