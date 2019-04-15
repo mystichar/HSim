@@ -1,9 +1,9 @@
-function [Plott]=plott63
+function [Plott]=plott7
   h=.05;
 
   x_lol= -3:h:6;
 
-  q_p=[(1.6*10^(-9)),-1,0];
+  q_p=[1,-1,0];
   m=[1,1,1];
   x_o=[0,1,0];
   y_o=[0,1,-1];
@@ -12,8 +12,7 @@ function [Plott]=plott63
   v_o=[0,0,0];
   w_o=[0,0,0];
     [ m_m, n_m] = size(m);
-%probe
-%object
+
 P(:,1,1)=x_o;
 P(:,2,1)=y_o;
 P(:,3,1)=z_o;
@@ -24,7 +23,6 @@ P(:,1,n_m)=0
 
   [ m_xlol, n_xlol] = size(x_lol);
 
-##particles will move one step after landing in another particle
 
 for i=2:n_xlol
   for p=1:n_m
